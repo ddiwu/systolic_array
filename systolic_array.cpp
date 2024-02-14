@@ -66,7 +66,25 @@ struct Systolic_Array
 			}
 		}
 	}
-};
+
+// 	void pulse(T a_vec[LEN], T b_vec[LEN])
+// 	{
+// 		#pragma HLS UNROLL
+// 		for (int i = 0; i < LEN; i++)
+// 		{
+// 			#pragma HLS UNROLL
+// 			for (int j = 0; j < LEN; j++)
+// 			{
+// 				int pos_y = (i >= LEN)?LEN-1-j:i-j;
+// 				int pos_x = (i >= LEN)?i-LEN+j+1:j;
+// 				// the data flows from the left and top
+// 				T a_get = (pos_y == 0)?a_vec[pos_x]:pe[pos_x][pos_y-1].a;
+// 				T b_get = (pos_x == 0)?b_vec[pos_y]:pe[pos_x-1][pos_y].b;
+// 				pe[pos_x][pos_y].process(a_get, b_get);
+// 			}
+// 		}
+// 	}
+// };
 
 Systolic_Array<DataType, SIDE_LEN> systolic_matrix;
 void pe_cal(int piece_a_cell, int piece_b_cell, int row, int col1, int col, int ori_col1, DataType din_a[], DataType din_b[])
