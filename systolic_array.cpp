@@ -66,7 +66,6 @@ struct Systolic_Array
 			}
 		}
 	}
-
 // 	void pulse(T a_vec[LEN], T b_vec[LEN])
 // 	{
 // 		#pragma HLS UNROLL
@@ -84,7 +83,7 @@ struct Systolic_Array
 // 			}
 // 		}
 // 	}
-// };
+};
 
 Systolic_Array<DataType, SIDE_LEN> systolic_matrix;
 void pe_cal(int piece_a_cell, int piece_b_cell, int row, int col1, int col, int ori_col1, DataType din_a[], DataType din_b[])
